@@ -57,16 +57,12 @@ def two_sum_optimized(arr, sum):
     sum_arr=[];
     value_dic={};
     for  i in range(len(arr)):
-        if(i>=sum):
-            continue;
-        elif(i == 0):
+        if(i == 0):
             value_dic[str(arr[i])] = i;
             continue;
         
         else:
             diff = sum - arr[i];
-            print(diff);
-            print(value_dic)
             if str(diff) in value_dic:
                 sum_arr.append(i);
                 sum_arr.append(value_dic[str(diff)]);
@@ -80,7 +76,7 @@ def two_sum_optimized(arr, sum):
     return sum_arr;
 
 
-value =[8,7,9,1];
-target = 9;
+value =[-3,4,3,90]
+target = 0;
 result = two_sum_optimized(value,target);
 print(*result, sep =', ')
