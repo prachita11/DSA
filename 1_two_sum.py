@@ -53,7 +53,34 @@ def two_sum(arr, sum):
     return sum_arr;
 
 
+def two_sum_optimized(arr, sum):
+    sum_arr=[];
+    value_dic={};
+    for  i in range(len(arr)):
+        if(i>=sum):
+            continue;
+        elif(i == 0):
+            value_dic[str(arr[i])] = i;
+            continue;
+        
+        else:
+            diff = sum - arr[i];
+            print(diff);
+            print(value_dic)
+            if str(diff) in value_dic:
+                sum_arr.append(i);
+                sum_arr.append(value_dic[str(diff)]);
+                break;
+            else:
+                value_dic[str(arr[i])]= i;
+        
+        
+
+        print(" index:"+ str(i)+" value"+ str(arr[i]))
+    return sum_arr;
+
+
 value =[8,7,9,1];
 target = 9;
-result = two_sum(value,target);
+result = two_sum_optimized(value,target);
 print(*result, sep =', ')
