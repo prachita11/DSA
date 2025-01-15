@@ -1,2 +1,1 @@
-# DSA
-solving 450+ DSA questions
+Documenting my journey of learning python + brushing up on DSA
